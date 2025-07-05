@@ -15,14 +15,15 @@ def send_signal():
 🔎 Result: 🔶 {result}
 
 📝 Register & Play Now:
-👉 Click Here to Register (27718100924) রেফার লিংক
+👉 <a href="https://dkwin9.com/#/register?invitationCode=27718100924">Click Here to Register</a>
 
 🧑‍💻 Creator: @BABY_CODER_1"""
 
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
     data = {
         "chat_id": CHAT_ID,
-        "text": message
+        "text": message,
+        "parse_mode": "HTML"
     }
     requests.post(url, data=data)
 
